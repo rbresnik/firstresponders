@@ -43,20 +43,20 @@
       --heading-font: "Raleway", sans-serif;
       --nav-font: "Lato", sans-serif;
       --background-color: #ffffff;
-      --default-color: #1643A2;
-      --heading-color: #1643A2;
-      --accent-color: #1643A2;
+      --default-color: #002868;
+      --heading-color: #002868;
+      --accent-color: #002868;
       --surface-color: #ffffff;
       --contrast-color: #ffffff;
-      --button-color: #b30000;
-      --button-hover-color: #900000;
-      --nav-color: #1643A2;
-      --nav-hover-color: #1643A2;
-      --nav-active-color: #b30000;
+      --button-color: #B22234;
+      --button-hover-color: #B22234;
+      --nav-color: #002868;
+      --nav-hover-color: #002868;
+      --nav-active-color: #B22234;
       --nav-mobile-background-color: #ffffff;
       --nav-dropdown-background-color: #ffffff;
-      --nav-dropdown-color: #1643A2;
-      --nav-dropdown-hover-color: #b30000;
+      --nav-dropdown-color: #002868;
+      --nav-dropdown-hover-color: #B22234;
       scroll-behavior: smooth;
     }
 
@@ -262,7 +262,7 @@
     .hero .hero-content .content-box .info-badges {
       display: flex;
       gap: 2rem;
-      justify-content: space-between;
+      justify-content: flex-start;
       width: 100%;
     }
 
@@ -270,17 +270,10 @@
       flex: 1;
       min-width: 220px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+      justify-content: flex-start;
       gap: 1rem;
       padding: 1rem 0;
-    }
-
-    .hero .hero-content .content-box .info-badges .badge-item:first-child {
-      justify-content: flex-start;
-    }
-
-    .hero .hero-content .content-box .info-badges .badge-item:last-child {
-      justify-content: flex-end;
     }
 
     .hero .hero-content .content-box .info-badges .badge-item i {
@@ -292,19 +285,25 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      text-align: left;
     }
 
     .hero .hero-content .content-box .info-badges .badge-item .badge-content span {
-      color: #b30000;
+      color: #ffffff;
       font-size: 1.3rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      display: block;
+      text-align: left;
     }
 
     .hero .hero-content .content-box .info-badges .badge-item .badge-content strong {
       font-size: 1.4rem;
       font-weight: 700;
+      color: #ffffff;
+      display: block;
+      text-align: left;
     }
 
     @media (max-width: 768px) {
@@ -314,11 +313,11 @@
       }
 
       .hero .hero-content .content-box .info-badges .badge-item {
-        justify-content: center;
+        justify-content: flex-start;
       }
 
       .hero .hero-content .content-box .info-badges .badge-item .badge-content {
-        align-items: center;
+        align-items: flex-start;
       }
     }
 
@@ -416,61 +415,61 @@
       }
     }
 
-  .certifications {
-    display: grid;
-    grid-template-columns: repeat(6, minmax(100px, 1fr));
-    justify-items: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 0;
-  }
-
-  .certification-title {
-    margin-bottom: 0.25rem;
-  }
-
-  .certification-copy {
-    margin: 0;
-    font-size: 1rem;
-    color: color-mix(in srgb, var(--default-color), black 30%);
-  }
-
-  .certification-item {
-    max-width: 210px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .certification-item img {
-    width: 100%;
-    height: auto;
-    max-height: 110px;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease, transform 0.3s ease;
-    object-fit: contain;
-  }
-
-  .certification-item img:hover {
-    transform: translateY(-3px);
-    filter: grayscale(0%);
-  }
-
-  .certification-item img.logo-belleville {
-    background-color: #ffffff;
-    padding: 0.35rem;
-    border-radius: 12px;
-  }
-
-  @media (max-width: 767px) {
     .certifications {
-      grid-template-columns: repeat(2, minmax(120px, 1fr));
+      display: grid;
+      grid-template-columns: repeat(6, minmax(100px, 1fr));
+      justify-items: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 0;
     }
-  }
 
-  .quality-grid h5 {
-    font-weight: 700;
-    color: #b30000;
-  }
+    .certification-title {
+      margin-bottom: 0.25rem;
+    }
+
+    .certification-copy {
+      margin: 0;
+      font-size: 1rem;
+      color: color-mix(in srgb, var(--default-color), black 30%);
+    }
+
+    .certification-item {
+      max-width: 210px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .certification-item img {
+      width: 100%;
+      height: auto;
+      max-height: 110px;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease, transform 0.3s ease;
+      object-fit: contain;
+    }
+
+    .certification-item img:hover {
+      transform: translateY(-3px);
+      filter: grayscale(0%);
+    }
+
+    .certification-item img.logo-belleville {
+      background-color: #ffffff;
+      padding: 0.35rem;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 767px) {
+      .certifications {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+      }
+    }
+
+    .quality-grid h5 {
+      font-weight: 700;
+      color: #b30000;
+    }
 
     @media (max-width: 575px) {
       .header .logo svg {
@@ -591,7 +590,7 @@
                       uniform packages for fire services, law enforcement, and emergency medical crews. Every stitch is
                       engineered for mobility, protection, and pride.</p>
 
-                    <div class="cta-group" data-aos="fade-up"></div>                     
+                    <div class="cta-group" data-aos="fade-up"></div>
 
                     <div class="info-badges" data-aos="fade-up" data-aos-delay="350">
                       <div class="badge-item">
@@ -627,7 +626,8 @@
         <div class="row gy-5 align-items-center">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="about-image">
-              <img src="assets/img/uniform-excellence.jpg" alt="Modern Healthcare Facility" class="img-fluid rounded-3 mb-4">
+              <img src="assets/img/uniform-excellence.jpg" alt="Modern Healthcare Facility"
+                class="img-fluid rounded-3 mb-4">
               <div class="experience-badge">
                 <span class="years">15+</span>
                 <span class="text">Years of Excellence</span>
@@ -638,9 +638,11 @@
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
               <h2>Committed to Exceptional Uniform Performance</h2>
-              <p class="lead">We engineer uniform systems that keep caregivers comfortable, confident, and protected from the moment they step onto the scene.</p>
+              <p class="lead">We engineer uniform systems that keep caregivers comfortable, confident, and protected
+                from the moment they step onto the scene.</p>
 
-              <p>Every stitch blends precision tailoring with advanced, breathable fabrics so every responder can focus on serving their community without worrying about mobility, abrasion, or long shifts.</p>
+              <p>Every stitch blends precision tailoring with advanced, breathable fabrics so every responder can focus
+                on serving their community without worrying about mobility, abrasion, or long shifts.</p>
 
               <div class="row g-4 mt-4">
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
@@ -649,7 +651,8 @@
                       <i class="bi bi-heart-pulse"></i>
                     </div>
                     <h4>Field-Tested Reliability</h4>
-                    <p>Reinforced seams, water-resistant finishes, and adaptive stretch zones hold up to life-or-death missions while keeping a polished appearance.</p>
+                    <p>Reinforced seams, water-resistant finishes, and adaptive stretch zones hold up to life-or-death
+                      missions while keeping a polished appearance.</p>
                   </div>
                 </div>
 
@@ -659,7 +662,8 @@
                       <i class="bi bi-star"></i>
                     </div>
                     <h4>Rapid Response Support</h4>
-                    <p>Dedicated stylists and logistics coordinators keep your fleet stocked with emergency fits, rush tailoring, and on-site inspections.</p>
+                    <p>Dedicated stylists and logistics coordinators keep your fleet stocked with emergency fits, rush
+                      tailoring, and on-site inspections.</p>
                   </div>
                 </div>
               </div>
@@ -670,9 +674,9 @@
 
         <div class="row mt-5 pt-4 certifications-row" data-aos="fade-up" data-aos-delay="600">
           <div class="col-12 text-center mb-2">
-                <div class="section-title">
-          <h2>Our Brands</h2>
-         </div>
+            <div class="section-title">
+              <h2>Our Brands</h2>
+            </div>
           </div>
           <div class="col-12">
             <div class="certifications">
@@ -873,36 +877,51 @@
               <p class="lead">Tell us your headcount, mission, and timeline. We will assemble a proposal with samples,
                 detailed
                 specs, and pricing.</p>
-              <form class="contact-form mt-4" action="#" method="post" novalidate>
+              <form class="contact-form mt-4"
+                action="https://script.google.com/macros/s/AKfycbyACZ0nl9n_OIEBDJYyOHDj2SKdN9eRDjtZmhppUrwfRw2frQ-TOeAIXaPRRb0zJKC6/exec"
+                method="post" novalidate>
                 <div class="row g-3">
                   <div class="col-md-6">
                     <label for="contact-name" class="form-label">Name</label>
                     <input type="text" id="contact-name" name="name" class="form-control" required>
                   </div>
+
                   <div class="col-md-6">
                     <label for="contact-email" class="form-label">Email</label>
                     <input type="email" id="contact-email" name="email" class="form-control" required>
                   </div>
+
                   <div class="col-md-6">
                     <label for="contact-phone" class="form-label">Phone</label>
                     <input type="tel" id="contact-phone" name="phone" class="form-control">
                   </div>
+
                   <div class="col-md-6">
                     <label for="contact-role" class="form-label">Role &amp; Agency</label>
                     <input type="text" id="contact-role" name="role" class="form-control">
                   </div>
+
                   <div class="col-12">
                     <label for="contact-message" class="form-label">Project Details</label>
                     <textarea id="contact-message" name="message" rows="4" class="form-control"
                       placeholder="Tell us about your team, quantities, and timeline." required></textarea>
                   </div>
+
+                  <input type="hidden" name="site" value="firstresponderssd.com">
                 </div>
+
                 <div class="d-flex justify-content-end mt-4">
                   <button class="btn contact-submit" type="submit">Send request</button>
                 </div>
-                <p class="mt-3 text-sm text-muted">We reply within 24 hours with sizing, pricing, and a next step plan.
+
+                <p class="mt-3 text-sm text-muted">
+                  We reply within 24 hours with sizing, pricing, and a next step plan.
                 </p>
+                <div id="contact-status" class="mt-3" aria-live="polite"></div>
+
               </form>
+
+
             </div>
           </div>
         </div>
@@ -955,7 +974,6 @@
   <div id="preloader"></div>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <script src="assets/vendor/php-email-form/validate.js" defer></script>
   <script src="assets/vendor/aos/aos.js" defer></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
@@ -964,6 +982,50 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
 
   <script src="assets/js/main.js" defer></script>
+
+  <script>
+  (function () {
+    const form = document.querySelector(".contact-form");
+    const statusEl = document.getElementById("contact-status");
+    if (!form || !statusEl) return;
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      statusEl.textContent = "Sending...";
+      statusEl.className = "mt-3";
+
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          redirect: "follow"
+        });
+
+        const text = await res.text();
+        let data;
+        try { data = JSON.parse(text); } catch { data = null; }
+
+        if (!res.ok || (data && data.ok === false)) {
+          const msg = (data && data.error) ? data.error : "Send failed";
+          throw new Error(msg);
+        }
+
+        statusEl.textContent = "Sent. We will reply within 24 hours.";
+        statusEl.className = "mt-3 alert alert-success";
+        form.reset();
+      } catch (err) {
+        statusEl.textContent = "Not sent. " + (err && err.message ? err.message : "Please try again.");
+        statusEl.className = "mt-3 alert alert-danger";
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    });
+  })();
+  </script>
 
 </body>
 
